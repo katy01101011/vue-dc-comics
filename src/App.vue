@@ -11,7 +11,8 @@
 
     <!-- Nav -->
     <AppNav />
-
+    <!-- Prefooter -->
+    <AppPrefooter />
     <!-- Footer -->
   </div>
 </template>
@@ -19,11 +20,13 @@
 <script>
 import AppHeader from "../src/components/AppHeader.vue";
 import AppNav from "../src/components/AppNav.vue";
+import AppPrefooter from "../src/components/AppPrefooter.vue";
 export default {
   name: "App",
   components: {
     AppHeader,
     AppNav,
+    AppPrefooter,
   },
 };
 </script>

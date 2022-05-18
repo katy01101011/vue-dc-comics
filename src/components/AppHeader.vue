@@ -80,8 +80,8 @@ export default {
   methods: {
     isActive: function (index) {
       event.preventDefault();
-      this.links.forEach((element, index) => {
-        this.links[index].active = false
+      this.links.forEach((element) => {
+        element.active = false;
       });
       this.links[index].active = !this.links[index].active;
     },
@@ -119,18 +119,17 @@ export default {
 
       &.active {
         border-bottom: 10px solid $blue-color;
-        transition: .5s;
+        transition: 0.5s;
       }
 
-      &:hover a{
+      &:hover a {
         color: $blue-color;
-        transition: .5s;
+        transition: 0.5s;
       }
 
       &:hover {
         border-bottom: 10px solid $blue-color;
-                transition: .5s;
-
+        transition: 0.5s;
       }
     }
   }
