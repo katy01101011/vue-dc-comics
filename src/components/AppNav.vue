@@ -3,21 +3,11 @@
     <div class="container">
       <nav>
         <ul>
-          <li>
-            link
-          </li>
-          <li>
-            link
-          </li>
-          <li>
-            link
-          </li>
-          <li>
-            link
-          </li>
-          <li>
-            link
-          </li>
+          <li>link</li>
+          <li>link</li>
+          <li>link</li>
+          <li>link</li>
+          <li>link</li>
         </ul>
       </nav>
     </div>
@@ -26,19 +16,19 @@
 
 <script>
 export default {
-    name: "AppNav"
-}
+  name: "AppNav",
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "../style/variables.scss";
+@import "../style/variables.scss";
 
-  .total {
-    background-color: $blue-color;
+.total {
+  background-color: $blue-color;
+  height: 200px;
+
+  nav {
     height: 200px;
-
-    nav {
-      height: 200px;
 
     ul {
       height: 100%;

@@ -2,10 +2,15 @@
   <header>
     <div class="container header">
       <div class="header__logo">
-        <img src="../assets/dc-logo.png" alt="">
+        <img src="../assets/dc-logo.png" alt="" />
       </div>
       <ul class="header__menu">
-        <li v-for="(item, index) in links" :key="index">
+        <li
+          @click="isActive(index)"
+          v-for="(item, index) in links"
+          :key="index"
+          :class="{ active: item.active }"
+        >
           <a href="">{{ item.text }}</a>
         </li>
       </ul>
@@ -16,62 +21,71 @@
 <script>
 export default {
   name: "AppHeader",
-  data: function() {
+  data: function () {
     return {
       links: [
         {
           url: "#",
-          text: Characters,
+          text: "Characters",
           active: false,
         },
-                {
+        {
           url: "#",
-          text: Comics,
+          text: "Comics",
           active: true,
         },
         {
           url: "#",
-          text: Movies,
+          text: "Movies",
           active: false,
         },
         {
           url: "#",
-          text: Tv,
+          text: "Tv",
           active: false,
         },
         {
           url: "#",
-          text: Games,
-          active: false,
-        },
-          {
-          url: "#",
-          text: Collectibles,
+          text: "Games",
           active: false,
         },
         {
           url: "#",
-          text: Videos,
+          text: "Collectibles",
           active: false,
         },
         {
           url: "#",
-          text: Fans,
+          text: "Videos",
           active: false,
         },
         {
           url: "#",
-          text: News,
+          text: "Fans",
           active: false,
         },
         {
           url: "#",
-          text: Shop,
+          text: "News",
           active: false,
-        }
-      ]
-    }
-  }
+        },
+        {
+          url: "#",
+          text: "Shop",
+          active: false,
+        },
+      ],
+    };
+  },
+  methods: {
+    isActive: function (index) {
+      event.preventDefault();
+      this.links.forEach((element, index) => {
+        this.links[index].active = false
+      });
+      this.links[index].active = !this.links[index].active;
+    },
+  },
 };
 </script>
 
@@ -94,7 +108,8 @@ export default {
 
     li {
       margin-left: 2rem;
-      
+      border-bottom: 10px solid transparent;
+
       a {
         color: $black-color;
         text-transform: uppercase;
@@ -104,9 +119,20 @@ export default {
 
       &.active {
         border-bottom: 10px solid $blue-color;
+        transition: .5s;
+      }
+
+      &:hover a{
+        color: $blue-color;
+        transition: .5s;
+      }
+
+      &:hover {
+        border-bottom: 10px solid $blue-color;
+                transition: .5s;
+
       }
     }
   }
 }
-
 </style>

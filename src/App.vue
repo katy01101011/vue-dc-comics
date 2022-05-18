@@ -2,16 +2,15 @@
   <div id="app" class="app">
     <!-- Header -->
     <AppHeader />
-    <!-- Content -->
+    <!-- Main -->
     <div style="background-color: black; color: white">
       <div class="container">
         <div class="app__content">Content</div>
       </div>
     </div>
+
     <!-- Nav -->
     <AppNav />
-    <!-- Main -->
-    Questo è main
 
     <!-- Footer -->
   </div>
@@ -30,6 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "./style/common.scss"
-
+@import "./style/common.scss";
 </style>
