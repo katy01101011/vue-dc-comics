@@ -7,6 +7,8 @@
               </div>
               <div class="card__text">
                   <h3>{{ item.series }}</h3>
+                  <h4>{{ item.price }}</h4>
+                  <h4>{{ item.type }}</h4>
               </div>
           </div>
       </div>
@@ -114,6 +116,11 @@ export default {
             width: 250px;
             margin: 2rem 1rem;
 
+            &:hover h3 {
+                    color: $blue-color;
+                    transition: .5s;
+                }
+
             &__img {
                 width: 100%;
                 height: 250px;
@@ -129,7 +136,6 @@ export default {
                 color: white;
                 text-transform: uppercase;
                 padding-top: 1rem;
-
             }
         }
         }
