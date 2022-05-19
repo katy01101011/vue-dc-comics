@@ -150,6 +150,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
+
 .prefooter-container {
   width: 100%;
   background-image: url(../assets/footer-bg.jpg);
@@ -171,18 +173,18 @@ export default {
     }
 
     a {
-      color: darkgray;
-      line-height: 2rem;
-      font-size: 1.2rem;
-      font-weight: 300;
+        color: darkgray;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        font-weight: 300;
     }
 
     h3 {
-      line-height: 5rem;
-      text-transform: uppercase;
-      font-size: 2rem;
-      font-weight: 500;
-      color: white;
+        line-height: 5rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 500;
+        color: white
     }
   }
 }
